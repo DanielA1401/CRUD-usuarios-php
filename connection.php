@@ -1,6 +1,21 @@
 <?php
 
 function connection(){
+    $host = "crud-users.mysql.database.azure.com";
+    $user = "U19052194";
+    $pass = "Jordimauricio12";
+
+    $bd = "users_crud_php";
+
+    $connect=mysqli_connect($host, $user, $pass);
+
+    mysqli_select_db($connect, $bd);
+
+    return $connect;
+
+}
+
+/*function connection(){
     $host = "localhost";
     $user = "root";
     $pass = "";
@@ -13,7 +28,6 @@ function connection(){
 
     return $connect;
 
-}
-
+}*/
 
 ?>

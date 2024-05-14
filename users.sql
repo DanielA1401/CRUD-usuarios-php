@@ -28,12 +28,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL PRIMARY KEY,
   `name` varchar(20) NOT NULL,
   `lastname` varchar(20) NOT NULL,
   `username` varchar(14) NOT NULL,
   `password` varchar(14) NOT NULL,
-  `email` varchar(20) NOT NULL
+  `email` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -42,7 +42,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `lastname`, `username`, `password`, `email`) VALUES
 (1, 'Daniel', 'Salmerón', 'salmeron_dev', '123456', 'salm@emial.com'),
-(5, 'Eduardo', 'Alvarado', 'daniel', '123', 'daniel@email.com');
+(2, 'Eduardo', 'Alvarado', 'daniel', '123', 'daniel@email.com');
 
 --
 -- Índices para tablas volcadas
@@ -51,8 +51,8 @@ INSERT INTO `users` (`id`, `name`, `lastname`, `username`, `password`, `email`) 
 --
 -- Indices de la tabla `users`
 --
-ALTER TABLE `users`
-  ADD PRIMARY KEY (`id`);
+-- ALTER TABLE `users`
+--  ADD PRIMARY KEY (`id`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -62,7 +62,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

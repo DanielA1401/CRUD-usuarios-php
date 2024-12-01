@@ -1,8 +1,8 @@
 <?php
 
 function connection(){
-    $host = "crud-users-cloud.mysql.database.azure.com";
-    $user = "U19052194";
+    $host = "lab52db.mysql.database.azure.com";
+    $user = "U20051135";
     $pass = "CloudComputing2024!";
 
     $bd = "users_crud_php";
